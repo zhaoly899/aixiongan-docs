@@ -23,10 +23,6 @@
 ### 操作说明
 
 在浏览器上登录LDAP管理界面（phpLDAPAdmin）的URL地址：`https://ldap.aixiongan.org.cn/`。
-管理员用户名：`cn=admin,dc=aixiongan,dc=com`
-
-​                          密码：ldapPa55word
-
 
 登录后，界面如下，用于操作的界面元素分为三部分：*左上操作按钮栏*、*左侧组织架构*、*右侧操作页面*。
 
