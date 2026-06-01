@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: quota-cpu-mem-gpu-pvc
+  namespace: {{ .Values.NameSpace }}
+spec:
+  hard:
+    limits.cpu: {{ default "72" .Values.Quota.CPU | quote }}
+    limits.memory: {{ default "250Gi" .Values.Quota.Memory }}
+    requests.cpu: {{ default "72" .Values.Quota.CPU | quote }}
+    requests.memory: {{ default "250Gi" .Values.Quota.Memory }}
+    requests.nvidia.com/gpu: {{ default "1" .Values.Quota.GPU | quote }}
+    requests.storage: {{ default "2T" .Values.Quota.Storage }}
+    count/pods: {{ default "10" .Values.Quota.Pods | quote }}
+
